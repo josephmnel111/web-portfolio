@@ -1,0 +1,26 @@
+.IndividualProjects {
+    background-color: white;
+    border:1px solid black;
+    text-align: center;
+    margin: 20px;
+    height: 200px;
+    background-color: rgba(0,0,255,0.5);
+}
+.ProjectTools {
+    
+}
+.Tool {
+    
+}
+img{
+    object-fit: contain;
+    height: 200px;
+  }
+.left-project {
+    width: 50%;
+    float: left;
+  }
+.right-project {
+    width: 50%;
+    float: right;
+}
