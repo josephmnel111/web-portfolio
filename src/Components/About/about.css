@@ -1,3 +1,22 @@
 .About {
-    height: 100vh;
+    font-family: 'Poppins';
+    background-color: #F9F9F9;
+    margin: 8%;
+    margin-bottom: 35vh;
+}
+.AboutTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 4%;
+}
+.AboutContent {
+    display: flex;
+    flex-direction: row;
+}
+.AboutImage {
+    margin-left: 5%;
+}
+.ImageValue {
+    width: 45vw;
+    border-radius: 12px;
 }

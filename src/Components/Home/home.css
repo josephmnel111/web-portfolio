@@ -1,10 +1,11 @@
 .Home {
     height: 100vh;
+    margin: 8%;
 }
 .contentContainer {
     position: absolute;
 }
-.BoxContainer {
+/*.BoxContainer {
     position: absolute;
     transform: translate( -50% , -50% );
     left: 50%;
@@ -14,36 +15,40 @@
     text-align: center;
   
     border: 3px solid black;
-}
+}*/
 .Name {
+    position: absolute;
+    transform: translate( -50% , -50% );
+    left: 50%;
+    top: 50%;
     font-size: 65px;
-    font-family: 'Open Sans Condensed';
-    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-weight: bold;
     letter-spacing: 0.05em;
 }
 .Title {
-    letter-spacing: 0.05em;
-    font-family: 'Volkorrn';
-    font-weight: italic;
-    font-size: 21px;
-    overflow: hidden;
-    margin: -30px -33px 0 -33px;
     position: absolute;
-    bottom: 10%;
-    width: calc( 100% + 6px );
+    transform: translate( -50% , -50% );
+    left: 50%;
+    top: 60%;
+    padding: 10px;
+    letter-spacing: 0.05em;
+    font-family: 'Poppins';
+    font-weight: italic;
+    font-size: 30px;
 }
 .IconLinks {
     position: absolute;
+    display: flex;
+    flex-direction: row;
     transform: translate( -50% , -50% );
     left: 50%;
     top: 70%;
 }
-.GithubIcon {
-    margin-left: .5rem;
+.Icon {
+    margin: 5px;
 }
-.ResumeIcon {
-    position: absolute;
-}
-.ResumeIcon:hover {
+.Icon:hover {
+    color: #007C7C;
     cursor: pointer;
 }

@@ -1,25 +1,42 @@
 import './home.css'
-import {forwardRef} from 'react'
-import {SocialIcon} from 'react-social-icons'
-import {FiFileText} from 'react-icons/fi';
-import React from 'react'
+import React, {forwardRef} from 'react'
+import { FaRegFileAlt } from 'react-icons/fa';
+import { SiLinkedin, SiGithub } from "react-icons/si";
+import PDF from './Resume.pdf'
+
 
 const  Home = forwardRef((props, ref) => {
+
+  const openResume = () => {
+    window.open(PDF);
+  }
+
     return (
         <div className = "Home" ref = {ref}>
           <div className = "ContentContainer">
-            <div className = "BoxContainer">
-              <div className = "Name">
-                Joseph Nelson
-                <div className = "Title"> 
-                  Software Engineer
-                </div>
-              </div>
+            <div className = "Name">
+              Joseph Nelson
+            </div>
+            <div className = "Title"> 
+              Software Developer
             </div>
             <div className = "IconLinks">
-              <SocialIcon className = "LinkedInIcon" url = "https://www.linkedin.com/in/joseph-nelson-240388246/" size = {56} bgColor="black" onMouseOver={({target})=>target.style.bgColor="white"}></SocialIcon>
-              <SocialIcon className = "GithubIcon" url = "https://github.com/josephmnel111/" size = {56}></SocialIcon>
-              <FiFileText className = "ResumeIcon" size = {52}/>
+              <div className = "Icon">
+                <SiGithub size = {40} onClick={openResume}/>
+              </div>
+              <div className = "Icon">
+                <SiLinkedin size = {40} onClick={() => {
+                  window.open(
+                    'https://www.linkedin.com/in/joseph-nelson-240388246/',
+                    '_blank' 
+                  );
+                }}/>
+              </div>
+              <div className = "Icon">
+                <FaRegFileAlt size = {40}onClick={() => {
+                  openResume()
+                }}/>
+              </div>
             </div>
           </div>
         </div>

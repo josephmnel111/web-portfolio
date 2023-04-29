@@ -1,10 +1,10 @@
+import './App.css';
+import './index.css'
 import NavigationBar from './Components/NavigationBar/navigation-bar';
 import Home from './Components/Home/home'
 import About from './Components/About/about'
 import Projects from './Components/Projects/projects'
-import {useRef} from 'react'
-import React from 'react'
-import './App.css';
+import React, {useRef} from 'react'
 
 /*
   Todo:

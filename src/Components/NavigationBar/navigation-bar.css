@@ -3,17 +3,20 @@
     display: flex;
     justify-content: space-around;
     position: fixed;
+    font-family: 'Poppins';
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
-    line-height: 70px;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
     z-index: 10;
     background-color: white;
-    border-bottom: solid;
-
+    border-bottom: 2px solid rgba(0, 0, 0, .2);
   }
-
+  * {
+    scroll-margin-top: 100px;
+  }
 .left {
   z-index: 20;
   width: 60%;
@@ -21,11 +24,14 @@
 }
 .right{
   display: flex;
-  justify-content: space-around;
   z-index: 20;
   width: 40%;
-  float: right;
+  justify-content: flex-end;
+}
+.divLink {
+  margin-right: 4vw;
 }
 .divLink:hover {
   cursor: pointer;
+  color: #007C7C;
 }

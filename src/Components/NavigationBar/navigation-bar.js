@@ -13,14 +13,14 @@ function NavigationBar ({homeRef, aboutRef, projectsRef}) {
         projectsRef.current.scrollIntoView({behavior: "smooth"})
     }
     return (
-        <div class="NavigationBar">
-            <div class = "left">
+        <div className="NavigationBar">
+            <div className = "left">
     
             </div>
-            <div class = "right">
-                <div className = "divLink" onClick = {handleHome}>HOME</div>
-                <div className = "divLink" onClick = {handleAbout}>ABOUT</div>
-                <div className = "divLink" onClick = {handleProjects}>PROJECTS</div>
+            <div className = "right">
+                <div className = "divLink" onClick = {handleHome}>Home</div>
+                <div className = "divLink" onClick = {handleAbout}>About</div>
+                <div className = "divLink" onClick = {handleProjects}>Projects</div>
             </div>
         </div>
     )

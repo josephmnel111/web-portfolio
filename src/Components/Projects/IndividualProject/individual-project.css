@@ -1,26 +1,77 @@
+body {
+  height: 100%;
+}
 .IndividualProjects {
-    background-color: white;
-    border:1px solid black;
-    text-align: center;
-    margin: 20px;
-    height: 200px;
-    background-color: rgba(0,0,255,0.5);
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  height: 100%;
+  padding: 3%;
+  border: 2px solid rgba(0, 0, 0, .2);
+  background-color: white;
+  text-align: center;
+  font-family: 'poppins';
+  margin-top: 3vh
+}
+.ProjectDescription {
+  margin-top: 2vh;
+}
+.DescriptionHead {
+  font-weight: bold;
+}
+.ProjectName {
+  font-weight: bold;
+  font-size: 18px;
 }
 .ProjectTools {
-    
+  margin-top: 2vh;
+}
+.ToolsHead {
+  font-weight: bold;
+}
+.ToolsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .Tool {
-    
+  border-radius: 8px;
+  margin: 5px;
+  padding: 3px;
+  border: 2px solid rgba(0, 0, 0, .2);
 }
-img{
-    object-fit: contain;
-    height: 200px;
-  }
+.ProjectButtons {
+  margin-top: 2vh;
+}
+.ButtonHead {
+  font-weight: bold;
+}
+.ButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  font-family: 'poppins';
+  font-size: 16px;
+  background-color: white;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 3px;
+  border: 2px solid rgba(0, 0, 0, .2);
+}
+button:hover {
+  cursor:pointer;
+  background-color:rgba(0, 0, 0, .2);
+}
+.ProjectImage {
+  width: 35vw;
+}
 .left-project {
-    width: 50%;
-    float: left;
-  }
+  width: 50%;
+  float: left;
+}
 .right-project {
-    width: 50%;
-    float: right;
+  width: 50%;
+  float: right;
 }

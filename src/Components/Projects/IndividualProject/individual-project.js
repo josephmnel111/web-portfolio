@@ -1,37 +1,61 @@
 import './individual-project.css'
-import JeopardyImage from './ProjectImages/JeopardyProject.jpg'
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
+
 
 function IndividualProjects({project}) {
+
+    const navigate = useNavigate();
+
     return (
         <div className = "IndividualProjects">
-            <div class = "left-project">
-                <img src = {project.pictureLink}/>
+            <div className = "left-project">
+                <img className = "ProjectImage" src = {project.pictureLink}/>
             </div>
-            <div class = "right-project">
+            <div className = "right-project">
                 <div className = "ProjectName">
                     {project.name}
                 </div>
-                
                 <div className = "ProjectDescription">
-                    Description: {project.description}
+                    <div className = "DescriptionHead">
+                        Description
+                    </div>
+                    {project.description}
                 </div>
-                <div className = "ProjectTools">
-                    Tools: 
-                    {
-                        project.tools.map((tool) =>
-                            <div className = "Tool"> {tool} </div>
-                        )
-                    }
+                <div className = "ProjectTools"> 
+                    <div className = "ToolsHead">
+                        Tools
+                    </div>
+                    <div className = "ToolsContainer">
+                        {
+                            project.tools.map((tool) =>
+                                <div className = "Tool"> {tool}</div>
+                            )
+                        }
+                    </div>
                 </div>
-                <button 
-                    class = "Github" 
-                    onClick={(e) => {
-                        e.preventDefault();
-                        window.open(project.githubLink);
-                    }}>
-                Github</button>
-                <button class = "Details">Details</button>
+                <div className = "ProjectButtons">
+                    <div className = "ButtonHead">
+                        More Options
+                    </div>
+                    <div className = "ButtonContainer">
+                        <button 
+                            className = "Github" 
+                            onClick={(e) => {
+                                e.preventDefault();
+                                window.open(project.githubLink);
+                            }}>
+                        Github
+                        </button>
+                        <button 
+                            className = "Details"
+                            onClick = {() => navigate(project.moreDetailsRoute)}
+                        >
+                            Details
+                        </button>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     )
