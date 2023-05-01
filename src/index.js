@@ -21,15 +21,15 @@ const router = createBrowserRouter([
     element: <App/>
   },
   {
-    path: "fitness-app-details",
+    path: "/web-portfolio/fitness-app-details",
     element: <FitnessAppDetails/>,
   },
   {
-    path: "jeopardy-game-details",
+    path: "/web-portfolio/jeopardy-game-details",
     element: <JeopardyGameDetails/>,
   },
   {
-    path: "oplogic-app-details",
+    path: "/web-portfolio/oplogic-app-details",
     element: <OplogicAppDetails/>,
   }
 ]);
