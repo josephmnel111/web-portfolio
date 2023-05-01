@@ -17,6 +17,10 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
+    path: "/web-portfolio",
+    element: <App/>
+  },
+  {
     path: "fitness-app-details",
     element: <FitnessAppDetails/>,
   },
