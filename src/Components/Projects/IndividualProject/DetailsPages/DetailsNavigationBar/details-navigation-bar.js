@@ -12,7 +12,7 @@ function NavigationBar () {
         <div 
             className="DetailsNavigationBar" 
         >
-            <AiOutlineLeft className = "LeftCarat" size = {24}onClick = {() => navigate('/')}></AiOutlineLeft>
+            <AiOutlineLeft className = "LeftCarat" size = {24}onClick = {() => navigate('/web-portfolio')}></AiOutlineLeft>
         </div>
     )
 }
