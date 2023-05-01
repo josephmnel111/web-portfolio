@@ -1,9 +1,19 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
 .Home {
     height: 100vh;
-    margin: 8%;
+    width: 100%;
 }
-.contentContainer {
+.ContentContainer {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 /*.BoxContainer {
     position: absolute;
@@ -17,20 +27,12 @@
     border: 3px solid black;
 }*/
 .Name {
-    position: absolute;
-    transform: translate( -50% , -50% );
-    left: 50%;
-    top: 50%;
-    font-size: 65px;
+    font-size: 50px;
     font-family: 'Poppins';
     font-weight: bold;
     letter-spacing: 0.05em;
 }
 .Title {
-    position: absolute;
-    transform: translate( -50% , -50% );
-    left: 50%;
-    top: 60%;
     padding: 10px;
     letter-spacing: 0.05em;
     font-family: 'Poppins';
@@ -38,12 +40,8 @@
     font-size: 30px;
 }
 .IconLinks {
-    position: absolute;
     display: flex;
     flex-direction: row;
-    transform: translate( -50% , -50% );
-    left: 50%;
-    top: 70%;
 }
 .Icon {
     margin: 5px;

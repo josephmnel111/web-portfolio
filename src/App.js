@@ -1,5 +1,6 @@
 import './App.css';
 import './index.css'
+import MobileNavigationBar from './Components/MobileNavigationBar/mobile-navigation-bar'
 import NavigationBar from './Components/NavigationBar/navigation-bar';
 import Home from './Components/Home/home'
 import About from './Components/About/about'
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <div className="App">
+      <MobileNavigationBar homeRef = {homeRef} aboutRef = {aboutRef} projectsRef = {projectsRef}></MobileNavigationBar>
       <NavigationBar homeRef = {homeRef} aboutRef = {aboutRef} projectsRef = {projectsRef}></NavigationBar>
       <Home ref = {homeRef}></Home>
       <About ref = {aboutRef}></About>

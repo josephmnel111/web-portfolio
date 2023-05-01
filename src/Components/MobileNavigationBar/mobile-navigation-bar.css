@@ -1,0 +1,83 @@
+.MobileNavigationBar {
+    justify-content: flex-end;
+    display: flex;
+    position: fixed;
+    font-family: 'Poppins';
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    z-index: 10;
+    background-color: white;
+    border-bottom: 2px solid rgba(0, 0, 0, .2);
+  }
+  * {
+    scroll-margin-top: 100px;
+  }
+.MenuIcon {
+  transition: all .5s ease-out
+ }
+ .MenuIcon:hover {
+  color: #007C7C;
+  cursor: pointer;
+ }
+.SidebarContainer {
+  position: fixed;
+  right: 0;
+  width: 150px;
+  height: 100%;
+  background-color: white;
+  transition: all .5s ease-out
+}
+.CloseButton {
+  height: 20px;
+  width: 20px;
+  
+}
+.SidebarHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 22px;
+  color: black;
+  line-height: 70px;
+  background-color: white;
+  user-select: none;
+}
+.SidebarContent {
+}
+.SidebarLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.SidebarLabel:hover {
+  color: #007C7C;
+  cursor: pointer;
+}
+.MobileNavigationContent {
+  margin-right: 2%;
+}
+.MobileNavigationContent:hover {
+  cursor: pointer;
+}
+.CloseButtonIcon:hover {
+  color: #007C7C;
+  cursor: pointer;
+}
+@media (orientation: portrait) {
+  .MobileNavigationBar {
+    display: flex;
+  }
+}
+@media (orientation: landscape) {
+  .MobileNavigationBar {
+    display: none;
+  }
+}

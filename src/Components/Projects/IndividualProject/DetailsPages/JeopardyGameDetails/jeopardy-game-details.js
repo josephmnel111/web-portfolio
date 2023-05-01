@@ -1,10 +1,52 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import './jeopardy-game-details.css'
 import DetailsNavigationBar from '../DetailsNavigationBar/details-navigation-bar'
 import '../details.css'
-import video1 from '../../ProjectVideos/countdown-2637.mp4'
+import APIVideo from '../../ProjectVideos/Jeopardy-Game/Api-Video.mp4'
+import QuestionVideo from '../../ProjectVideos/Jeopardy-Game/Jeopardy_Question_Clip.mp4'
 
 function JeopardyDetails () {
+
+    const apiVideoRef = useRef(null)
+    const questionVideoRef = useRef(null)
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        let options = {
+          rootMargin: "0px",
+          threshold: [0.90, 1.00]
+        };
+            let handlePlayQuestion = (entries, questionObserver) => {
+                entries.forEach((entry) => {
+                    if (questionVideoRef.current != null) { //If we haven't navigated away from video page
+                        if (entry.isIntersecting) {
+                            questionVideoRef.current.play();
+                        } else {
+                            questionVideoRef.current.pause();
+                        }
+                    }
+              });
+            }
+            let questionObserver = new IntersectionObserver(handlePlayQuestion, options);
+            questionObserver.observe(questionVideoRef.current)
+    
+    
+            let handlePlayAPI =(entries, apiObserver) => {
+                entries.forEach((entry) => {
+                    if (apiVideoRef.current != null) { //If we haven't navigated away from video page
+                        if (entry.isIntersecting) {
+                            apiVideoRef.current.play();
+                        } else {
+                            apiVideoRef.current.pause();
+                        }
+                    }
+              });
+            }
+            let apiObserver = new IntersectionObserver(handlePlayAPI, options);
+            apiObserver.observe(apiVideoRef.current)
+    });
+
+
     return (
         <div className = "DetailsContainer">
             <DetailsNavigationBar/>
@@ -18,7 +60,7 @@ function JeopardyDetails () {
                 <div className = "IntroductionContent">
                 &emsp;This was one of the first projects I created in my spare time. The original version
                 used PHP to code the backend and recorded the leaderboard results in a database. Because I am hosting this project,
-                I the live demo version, so it will not record the results. This way it does not require a login feature and is simpler
+                I changed the live demo version, so it will not record the results. This way it does not require a login feature and is simpler
                 to use.
                 </div>
             </div>
@@ -37,7 +79,10 @@ function JeopardyDetails () {
                         There are 5 categories with 6 pairs in each category that are retreived.
                         </div>
                         <div className = "FeaturesGraphic">
-                            <video src = {video1} autoplay="true" height = "250vw" width = "500vw"></video>
+                            <video src = {APIVideo} autoFocus={false} ref = {apiVideoRef} muted="muted" controls={true} loop={true} height = "240px" width = "380px"></video>
+                        </div>
+                        <div className = "VideoEnd">
+
                         </div>
                     </div>
                 </div>
@@ -49,12 +94,15 @@ function JeopardyDetails () {
                         <div className = "FeaturesBody">
                         &emsp;When a user clicks on one of the dollar amounts in the table, they are asked a question and
                         can respond accordingly with their answer guess. The program checks the similarity between
-                        the user's answer and the correct answer. If they are similar enough, the appropriate dollar
-                        value is added onto the running total. Once the user has answered all 30 questions, their Functionality
-                        score is displayed, and they are asked if they would like to exit or play again.
+                        the user's answer and the correct answer. The check disregards spaces, capitalization, and punctuation.
+                        If the answer is correct, the appropriate dollar value is added onto the running total. Once the user has 
+                        answered all 30 questions, their score is displayed, and they are asked if they would like to exit or play again.
                         </div>
-                        <div className = "FeaturesGraphic">
-                            <video src = {video1} autoplay="true" height = "250vw" width = "500vw"></video>
+                        <div className = "FeaturesGraphic" >
+                            <video src = {QuestionVideo} ref = {questionVideoRef} muted="muted" controls={true} loop={true} height = "240px" width = "380px"></video>
+                        </div>
+                        <div className = "VideoEnd">
+
                         </div>
                     </div>
                 </div>

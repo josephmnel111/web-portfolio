@@ -5,7 +5,7 @@ body {
 .DetailsContainer {
     margin-left: 8%;
     margin-right: 8%;
-    margin-top: 4%;
+    margin-top: 5%;
     margin-bottom: 4%;
 }
 .DetailsTitle {
@@ -39,10 +39,39 @@ body {
 .FeaturesBody {
     
 }
+video {
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
 .FeaturesGraphic {
+    margin: 3vh;
     text-align: center;
-    margin-top: 3vh;
 }
 .FeaturesTwoGraphics {
-    
+    margin: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
 }
+.SectionTitle {
+    font-weight: bold;
+}
+.FirstSection {
+    text-align: center;
+}
+.SecondSection {
+    text-align: center;
+}
+
+@media (orientation: portrait) {
+    html, body {
+        margin: 0%;
+    }
+    .DetailsContainer {
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 10%;
+    }
+  }

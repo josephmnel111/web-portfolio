@@ -22,7 +22,12 @@ const  Home = forwardRef((props, ref) => {
             </div>
             <div className = "IconLinks">
               <div className = "Icon">
-                <SiGithub size = {40} onClick={openResume}/>
+                <SiGithub size = {40}  onClick={() => {
+                  window.open(
+                    'https://github.com/josephmnel111',
+                    '_blank' 
+                  );
+                }}/>
               </div>
               <div className = "Icon">
                 <SiLinkedin size = {40} onClick={() => {

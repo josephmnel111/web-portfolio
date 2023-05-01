@@ -9,9 +9,6 @@ function IndividualProjects({project}) {
 
     return (
         <div className = "IndividualProjects">
-            <div className = "left-project">
-                <img className = "ProjectImage" src = {project.pictureLink}/>
-            </div>
             <div className = "right-project">
                 <div className = "ProjectName">
                     {project.name}
@@ -28,8 +25,8 @@ function IndividualProjects({project}) {
                     </div>
                     <div className = "ToolsContainer">
                         {
-                            project.tools.map((tool) =>
-                                <div className = "Tool"> {tool}</div>
+                            project.tools.map((tool, index) =>
+                                <div key = {index} className = "Tool"> {tool}</div>
                             )
                         }
                     </div>
@@ -39,6 +36,15 @@ function IndividualProjects({project}) {
                         More Options
                     </div>
                     <div className = "ButtonContainer">
+                        { project.liveDemo !== "none" &&
+                            <button 
+                                onClick={() => {
+                                    window.open(project.liveDemo)
+                                }}
+                            >
+                                Demo
+                            </button>
+                        }
                         <button 
                             className = "Github" 
                             onClick={(e) => {
@@ -57,6 +63,10 @@ function IndividualProjects({project}) {
                     
                 </div>
             </div>
+            <div className = "left-project">
+                <img className = {project.class_Name} src = {project.pictureLink} alt = ""/>
+            </div>
+            
         </div>
     )
 }

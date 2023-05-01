@@ -64,14 +64,37 @@ button:hover {
   cursor:pointer;
   background-color:rgba(0, 0, 0, .2);
 }
-.ProjectImage {
-  width: 35vw;
-}
 .left-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   float: left;
 }
 .right-project {
   width: 50%;
   float: right;
+}
+.Oplogic {
+  width: 35vw;
+}
+.Jeopardy {
+  width: 35vw;
+}
+.Fitness {
+  width: 15vw;
+}
+@media (orientation: portrait) {
+  .IndividualProjects {
+    flex-direction: column;
+  }
+  .Oplogic {
+    width: 50vw;
+  }
+  .Jeopardy {
+    width: 50vw;
+  }
+  .left-project {
+    margin-top: 2vh;
+  }
 }

@@ -1,10 +1,99 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import './oplogic-app-details.css'
 import DetailsNavigationBar from '../DetailsNavigationBar/details-navigation-bar'
 import '../details.css'
-import video1 from '../../ProjectVideos/countdown-2637.mp4'
+import CreatingVideo from '../../ProjectVideos/Oplogic/Oplogic-Create.mp4'
+import MessagingVideo1 from '../../ProjectVideos/Oplogic/OplogicMessagingVideo1.mp4'
+import MessagingVideo2 from '../../ProjectVideos/Oplogic/OplogicMessagingVideo2.mp4'
+import TaggingVideo1 from '../../ProjectVideos/Oplogic/OplogicTaggingVideo1.mp4'
+import TaggingVideo2 from '../../ProjectVideos/Oplogic/OplogicTaggingVideo2.mp4'
 
 function OplogicAppDetails () {
+
+    const creatingVideoRef = useRef(null)
+    const messagingVideo1Ref = useRef(null)
+    const messagingVideo2Ref = useRef(null)
+    const taggingVideo1Ref = useRef(null)
+    const taggingVideo2Ref = useRef(null)
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        let options = {
+          rootMargin: "0px",
+          threshold: [0.90, 1.00]
+        };
+            let handlePlayCreating = (entries, creatingObserver) => {
+                entries.forEach((entry) => {
+                    if (creatingVideoRef.current != null) { //If we haven't navigated away from video page
+                        if (entry.isIntersecting) {
+                            creatingVideoRef.current.play();
+                        } else {
+                            creatingVideoRef.current.pause();
+                        }
+                    }
+              });
+            }
+            let creatingObserver = new IntersectionObserver(handlePlayCreating, options);
+            creatingObserver.observe(creatingVideoRef.current)
+    
+    
+            let handlePlayMessaging1 =(entries, messaging1Observer) => {
+                entries.forEach((entry) => {
+                    if (messagingVideo1Ref.current != null) { //If we haven't navigated away from video page
+                        if (entry.isIntersecting) {
+                            messagingVideo1Ref.current.play();
+                        } else {
+                            messagingVideo1Ref.current.pause();
+                        }
+                    }
+              });
+            }
+            let messaging1Observer = new IntersectionObserver(handlePlayMessaging1, options);
+            messaging1Observer.observe(messagingVideo1Ref.current)
+
+            let handlePlayMessaging2 =(entries, messaging2Observer) => {
+                entries.forEach((entry) => {
+                    if (messagingVideo2Ref.current != null) { //If we haven't navigated away from video page
+                        if (entry.isIntersecting) {
+                            messagingVideo2Ref.current.play();
+                        } else {
+                            messagingVideo2Ref.current.pause();
+                        }
+                    }
+              });
+            }
+            let messaging2Observer = new IntersectionObserver(handlePlayMessaging2, options);
+            messaging2Observer.observe(messagingVideo2Ref.current)
+
+            let handlePlayTagging1 =(entries, tagging1Observer) => {
+                entries.forEach((entry) => {
+                    if (taggingVideo1Ref.current != null) { //If we haven't navigated away from video page
+                        if (entry.isIntersecting) {
+                            taggingVideo1Ref.current.play();
+                        } else {
+                            taggingVideo1Ref.current.pause();
+                        }
+                    }
+              });
+            }
+            let tagging1Observer = new IntersectionObserver(handlePlayTagging1, options);
+            tagging1Observer.observe(taggingVideo1Ref.current)
+
+            let handlePlayTagging2 =(entries, tagging2Observer) => {
+                entries.forEach((entry) => {
+                    if (taggingVideo2Ref.current != null) { //If we haven't navigated away from video page
+                        if (entry.isIntersecting) {
+                            taggingVideo2Ref.current.play();
+                        } else {
+                            taggingVideo2Ref.current.pause();
+                        }
+                    }
+              });
+            }
+            let tagging2Observer = new IntersectionObserver(handlePlayTagging2, options);
+            tagging2Observer.observe(taggingVideo2Ref.current)
+    });
+
     return (
         <div className = "DetailsContainer">
             <DetailsNavigationBar/>
@@ -16,7 +105,7 @@ function OplogicAppDetails () {
                     Introduction
                 </div>
                 <div className = "IntroductionContent">
-                    This was a custom web messaging application that I helped build with a team from Oplogic and four
+                    &emsp;This was a custom web messaging application that I helped build with a team from Oplogic and four
                     other students for a Senior Design project. The app is currently being used as a primary method of 
                     communication between the employees at Oplogic. I was primarily responsible for the communication between
                     the client and server, much of the backend, a couple of the modales, and the user tagging system. Because this
@@ -34,7 +123,7 @@ function OplogicAppDetails () {
                     </div>
                     <div className = "FeaturesContentSection">
                         <div className = "FeaturesBody">
-                            This allows you to create a new group channel/private message with anyone else who has registered
+                            &emsp;This allows you to create a new group channel/private message with anyone else who has registered
                             an account with the app. Because the focus was creating an app for the employees which 
                             number in the tens and hundereds, not thousands and millions, we did not
                             have to worry about entering a person's unique id while inviting them to the group. Instead, 
@@ -43,7 +132,7 @@ function OplogicAppDetails () {
                             than figuring out what their unique id is.
                         </div>
                         <div className = "FeaturesGraphic">
-                            <video src = {video1} autoplay="true" height = "250vw" width = "500vw"></video>
+                            <video src = {CreatingVideo} ref = {creatingVideoRef} muted="muted" controls={true} loop={true} height = "240px" width = "240px"></video>
                         </div>
                     </div>
                 </div>
@@ -53,7 +142,7 @@ function OplogicAppDetails () {
                     </div>
                     <div className = "FeaturesContentSection">
                         <div className = "FeaturesBody">
-                            This feature is the major function of the program. It allows for communication
+                            &emsp;This feature is the major function of the program. It allows for communication
                             through private messaging and group channels. We also added a unique feature which
                             allows employees to reference the profiles of customers. This allows for easy communication
                             about clients because their information such as name, phone number, email, desired car, etc. 
@@ -61,8 +150,18 @@ function OplogicAppDetails () {
                             files to be sent over the messaging system.
                         </div>
                         <div className = "FeaturesTwoGraphics">
-                            <video src = {video1} autoplay="true" height = "250vw" width = "500vw"></video>
-                            <video src = {video1} autoplay="true" height = "250vw" width = "500vw"></video>
+                        <div className = "FirstSection">   
+                                <div className = "SectionTitle">
+                                    User 1
+                                </div>
+                                <video className = "VideoClass" src = {MessagingVideo1} ref = {messagingVideo1Ref} muted="muted" controls={true} loop={true} height = "240px" width = "240px"></video>
+                            </div>
+                            <div className = "SecondSection">
+                                <div className = "SectionTitle">
+                                    User 2
+                                </div>
+                                <video className = "VideoClass" src = {MessagingVideo2} ref = {messagingVideo2Ref} muted="muted" controls={true} loop={true} height = "240px" width = "240px"></video>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -72,7 +171,7 @@ function OplogicAppDetails () {
                     </div>
                     <div className = "FeaturesContentSection">
                         <div className = "FeaturesBody">
-                        The tagging and notificaton system works very similarly to how it works in Slack or Discord.
+                        &emsp;The tagging and notificaton system works very similarly to how it works in Slack or Discord.
                         When a user is in a group or channel, they can type the @ symbol and a list of the users in
                         that channel is displayed. They can click the name they wanted to tag, or keep typing the name
                         to narrow down the list even more. When a user is selected and the message is sent, the user of
@@ -80,8 +179,18 @@ function OplogicAppDetails () {
                         based on the number of notifications.
                         </div>
                         <div className = "FeaturesTwoGraphics">
-                            <video src = {video1} autoplay="true" height = "250vw" width = "500vw"></video>
-                            <video src = {video1} autoplay="true" height = "250vw" width = "500vw"></video>
+                            <div className = "FirstSection">   
+                                <div className = "SectionTitle">
+                                    User 1
+                                </div>
+                                <video className = "VideoClass" src = {TaggingVideo1} ref = {taggingVideo1Ref} muted="muted" controls={true} loop={true} height = "240px" width = "240px"></video>
+                            </div>
+                            <div className = "SecondSection">
+                                <div className = "SectionTitle">
+                                    User 2
+                                </div>
+                                <video className = "VideoClass" src = {TaggingVideo2} ref = {taggingVideo2Ref} muted="muted" controls={true} loop={true} height = "240px" width = "240px"></video>
+                            </div>
                         </div>
                     </div>
                 </div>

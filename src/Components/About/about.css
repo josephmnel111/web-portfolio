@@ -2,7 +2,7 @@
     font-family: 'Poppins';
     background-color: #F9F9F9;
     margin: 8%;
-    margin-bottom: 35vh;
+    margin-bottom: 10%;
 }
 .AboutTitle {
     font-size: 20px;
@@ -14,9 +14,19 @@
     flex-direction: row;
 }
 .AboutImage {
+    text-align: center;
     margin-left: 5%;
 }
 .ImageValue {
     width: 45vw;
     border-radius: 12px;
+}
+@media (orientation: portrait) {
+    .AboutTitle {
+        text-align: center;
+    }
+    .AboutContent {
+        flex-direction: column;
+        text-align: center;
+    }
 }

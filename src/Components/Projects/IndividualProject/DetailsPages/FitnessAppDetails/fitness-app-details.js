@@ -1,10 +1,51 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import './fitness-app-details.css'
 import DetailsNavigationBar from '../DetailsNavigationBar/details-navigation-bar'
 import '../details.css'
-import video1 from '../../ProjectVideos/countdown-2637.mp4'
+import ProfileVideo from '../../ProjectVideos/Fitness-App/Fitness-App-Profile.mp4'
+import LiftingVideo from '../../ProjectVideos/Fitness-App/Fitness-App-Lifting.mp4'
 
 function FitnessAppDetails () {
+
+    const profileVideoRef = useRef(null)
+    const liftingVideoRef = useRef(null)
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        let options = {
+          rootMargin: "0px",
+          threshold: [0.90, 1.00]
+        };
+            let handlePlayProfile = (entries, profileObserver) => {
+                entries.forEach((entry) => {
+                    if (profileVideoRef.current != null) { //If we haven't navigated away from video page
+                        if (entry.isIntersecting) {
+                            profileVideoRef.current.play();
+                        } else {
+                            profileVideoRef.current.pause();
+                        }
+                    }
+              });
+            }
+            let profileObserver = new IntersectionObserver(handlePlayProfile, options);
+            profileObserver.observe(profileVideoRef.current)
+    
+    
+            let handlePlayLifting =(entries, liftingObserver) => {
+                entries.forEach((entry) => {
+                    if (liftingVideoRef.current != null) { //If we haven't navigated away from video page
+                        if (entry.isIntersecting) {
+                            liftingVideoRef.current.play();
+                        } else {
+                            liftingVideoRef.current.pause();
+                        }
+                    }
+              });
+            }
+            let liftingObserver = new IntersectionObserver(handlePlayLifting, options);
+            liftingObserver.observe(liftingVideoRef.current)
+    });
+
     return (
         <div className = "DetailsContainer">
             <DetailsNavigationBar/>
@@ -32,12 +73,11 @@ function FitnessAppDetails () {
                     </div>
                     <div className = "FeaturesContentSection">
                         <div className = "FeaturesBody">
-                            &emsp;This allows you to schedule your workouts in advanced. It will allow you to schedule
-                            workouts well into the future, so you can plan your progress. You can also view and 
-                            edit these workouts after they have been created initiailly.
+                            &emsp;This allows you to schedule your workouts in advance either singularly 
+                            or in a group. You can also view and edit these workouts after they have been initially created.
                         </div>
                         <div className = "FeaturesGraphic">
-                            <video src = {video1} autoplay="true" height = "250vw" width = "500vw"></video>
+                            <video src = {LiftingVideo} ref = {liftingVideoRef} muted="muted" controls={true} loop={true} height = "380px" width = "220px"></video>
                         </div>
                     </div>
                 </div>
@@ -51,7 +91,7 @@ function FitnessAppDetails () {
                             weight, and body fat % over a specific time interval.
                         </div>
                         <div className = "FeaturesGraphic">
-                            <video src = {video1} autoplay="true" height = "250vw" width = "500vw"></video>
+                            <video src = {ProfileVideo} ref = {profileVideoRef} muted="muted" controls={true} loop={true} height = "380px" width = "220px"></video>
                         </div>
                     </div>
                 </div>
@@ -62,7 +102,7 @@ function FitnessAppDetails () {
                     <div className = "FeaturesContentSection">
                         <div className = "FeaturesBody">
                             &emsp;You will be able to easily track and schedule your runs. My goal is to allow you to schedule a 
-                            specific run before hand using a map or allow you to track your run and schedule the same route 
+                            specific run before hand or allow you to track your run and schedule the same route 
                             for later. It will also track other data such as speed, steps taken, and calories burned.
                         </div>
                         <div className = "FeaturesGraphic">
