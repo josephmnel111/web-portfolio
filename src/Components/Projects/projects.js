@@ -19,7 +19,7 @@ const projectDetails = [
         tools: ["Angular", "NodeJS", "MySQL"],
         githubLink: "https://github.com/josephmnel111/oplogic_project",
         pictureLink: OplogicAppImage,
-        moreDetailsRoute: "oplogic-app-details",
+        moreDetailsRoute: "/web-portfolio/oplogic-app-details",
         liveDemo: "none"
     },
     
@@ -31,7 +31,7 @@ const projectDetails = [
         tools: ["Javascript", "PHP"],
         githubLink: "https://github.com/josephmnel111/JeopardyGame",
         pictureLink: JeopardyGameImage,
-        moreDetailsRoute: "jeopardy-game-details",
+        moreDetailsRoute: "/web-portfolio/jeopardy-game-details",
         liveDemo: "https://jeopardy-game-demo.netlify.app/"
     },
     {
@@ -42,7 +42,7 @@ const projectDetails = [
         tools: ["React Native", "NodeJS", "MySQL"],
         githubLink: "https://github.com/josephmnel111/Fitness-App",
         pictureLink: FitnessAppImage,
-        moreDetailsRoute: "fitness-app-details",
+        moreDetailsRoute: "/web-portfolio/fitness-app-details",
         liveDemo: "none"
     }
 ]
