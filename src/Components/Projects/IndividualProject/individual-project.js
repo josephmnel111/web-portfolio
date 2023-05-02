@@ -17,7 +17,9 @@ function IndividualProjects({project}) {
                     <div className = "DescriptionHead">
                         Description
                     </div>
-                    {project.description}
+                    <div className = "DescriptionContent">
+                        {project.description}
+                    </div>
                 </div>
                 <div className = "ProjectTools"> 
                     <div className = "ToolsHead">

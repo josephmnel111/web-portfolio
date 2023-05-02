@@ -1,0 +1,10 @@
+.FitnessVideo {
+    height: 35.3488vw;
+    width: 20vw;
+}
+@media (orientation: portrait) {
+    .FitnessVideo {
+        width: 215px;
+        height: 380px;
+    }
+  }

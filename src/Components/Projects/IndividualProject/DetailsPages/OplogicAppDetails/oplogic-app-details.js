@@ -132,7 +132,7 @@ function OplogicAppDetails () {
                             than figuring out what their unique id is.
                         </div>
                         <div className = "FeaturesGraphic">
-                            <video src = {CreatingVideo} ref = {creatingVideoRef} muted="muted" controls={true} loop={true} height = "240px" width = "240px"></video>
+                            <video className = "OplogicVideo" src = {CreatingVideo} ref = {creatingVideoRef} muted="muted" controls={true} loop={true}></video>
                         </div>
                     </div>
                 </div>
@@ -150,19 +150,19 @@ function OplogicAppDetails () {
                             files to be sent over the messaging system.
                         </div>
                         <div className = "FeaturesTwoGraphics">
-                        <div className = "FirstSection">   
-                                <div className = "SectionTitle">
-                                    User 1
+                            <div className = "FirstSection">   
+                                    <div className = "SectionTitle">
+                                        User 1
+                                    </div>
+                                    <video className = "TwoOplogicVideo" src = {MessagingVideo1} ref = {messagingVideo1Ref} muted="muted" controls={true} loop={true}></video>
                                 </div>
-                                <video className = "VideoClass" src = {MessagingVideo1} ref = {messagingVideo1Ref} muted="muted" controls={true} loop={true} height = "240px" width = "240px"></video>
-                            </div>
-                            <div className = "SecondSection">
-                                <div className = "SectionTitle">
-                                    User 2
+                                <div className = "SecondSection">
+                                    <div className = "SectionTitle">
+                                        User 2
+                                    </div>
+                                    <video className = "TwoOplogicVideo" src = {MessagingVideo2} ref = {messagingVideo2Ref} muted="muted" controls={true} loop={true}></video>
                                 </div>
-                                <video className = "VideoClass" src = {MessagingVideo2} ref = {messagingVideo2Ref} muted="muted" controls={true} loop={true} height = "240px" width = "240px"></video>
                             </div>
-                        </div>
                     </div>
                 </div>
                 <div className = "FeaturesSection">
@@ -183,13 +183,13 @@ function OplogicAppDetails () {
                                 <div className = "SectionTitle">
                                     User 1
                                 </div>
-                                <video className = "VideoClass" src = {TaggingVideo1} ref = {taggingVideo1Ref} muted="muted" controls={true} loop={true} height = "240px" width = "240px"></video>
+                                <video className = "TwoOplogicVideo" src = {TaggingVideo1} ref = {taggingVideo1Ref} muted="muted" controls={true} loop={true}></video>
                             </div>
                             <div className = "SecondSection">
                                 <div className = "SectionTitle">
                                     User 2
                                 </div>
-                                <video className = "VideoClass" src = {TaggingVideo2} ref = {taggingVideo2Ref} muted="muted" controls={true} loop={true} height = "240px" width = "240px"></video>
+                                <video className = "TwoOplogicVideo" src = {TaggingVideo2} ref = {taggingVideo2Ref} muted="muted" controls={true} loop={true}></video>
                             </div>
                         </div>
                     </div>

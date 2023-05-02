@@ -1,7 +1,20 @@
+.OplogicVideo {
+    height: 50%;
+    width: 50%;
+}
+.TwoOplogicVideo {
+    height: 70%;
+    width: 70%;
+}
+
 
 @media (orientation: portrait) {
-    .VideoClass {
-        height: 180px;
-        width: 180px;
+    .OplogicVideo {
+        height: 220px;
+        width: 220px;
+    }
+    .TwoOplogicVideo {
+        height: 150px;
+        width: 150px;
     }
   }

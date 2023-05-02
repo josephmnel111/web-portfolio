@@ -79,7 +79,7 @@ function JeopardyDetails () {
                         There are 5 categories with 6 pairs in each category that are retreived.
                         </div>
                         <div className = "FeaturesGraphic">
-                            <video src = {APIVideo} autoFocus={false} ref = {apiVideoRef} muted="muted" controls={true} loop={true} height = "240px" width = "380px"></video>
+                            <video className = "JeopardyVideo" src = {APIVideo} autoFocus={false} ref = {apiVideoRef} muted="muted" controls={true} loop={true} height = "240px" width = "380px"></video>
                         </div>
                         <div className = "VideoEnd">
 
@@ -99,7 +99,7 @@ function JeopardyDetails () {
                         answered all 30 questions, their score is displayed, and they are asked if they would like to exit or play again.
                         </div>
                         <div className = "FeaturesGraphic" >
-                            <video src = {QuestionVideo} ref = {questionVideoRef} muted="muted" controls={true} loop={true} height = "240px" width = "380px"></video>
+                            <video className = "JeopardyVideo" src = {QuestionVideo} ref = {questionVideoRef} muted="muted" controls={true} loop={true}></video>
                         </div>
                         <div className = "VideoEnd">
 

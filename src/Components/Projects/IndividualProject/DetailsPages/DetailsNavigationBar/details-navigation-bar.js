@@ -3,7 +3,6 @@ import React from 'react'
 import {useNavigate} from 'react-router-dom'
 import {AiOutlineLeft} from "react-icons/ai";
 
-
 function NavigationBar () {
 
     const navigate = useNavigate();

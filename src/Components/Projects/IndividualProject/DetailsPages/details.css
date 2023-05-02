@@ -49,6 +49,8 @@ video {
     text-align: center;
 }
 .FeaturesTwoGraphics {
+    height: 100%;
+    width: 100%;
     margin: 3vh;
     display: flex;
     flex-direction: row;
@@ -60,9 +62,13 @@ video {
 }
 .FirstSection {
     text-align: center;
+    height: 100%;
+    width: 100%;
 }
 .SecondSection {
     text-align: center;
+    height: 100%;
+    width: 100%;
 }
 
 @media (orientation: portrait) {
@@ -70,8 +76,6 @@ video {
         margin: 0%;
     }
     .DetailsContainer {
-        margin-left: 1%;
-        margin-right: 1%;
         margin-top: 10%;
     }
   }
