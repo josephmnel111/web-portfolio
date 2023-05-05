@@ -77,7 +77,7 @@ function FitnessAppDetails () {
                             or in a group. You can also view and edit these workouts after they have been initially created.
                         </div>
                         <div className = "FeaturesGraphic">
-                            <video className = "FitnessVideo" src = {LiftingVideo} ref = {liftingVideoRef} muted="muted" controls={true} loop={true}></video>
+                            <video className = "FitnessVideo" src = {LiftingVideo} ref = {liftingVideoRef} muted="muted" controls={true}></video>
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@ function FitnessAppDetails () {
                             weight, and body fat % over a specific time interval.
                         </div>
                         <div className = "FeaturesGraphic">
-                            <video className = "FitnessVideo" src = {ProfileVideo} ref = {profileVideoRef} muted="muted" controls={true} loop={true}></video>
+                            <video className = "FitnessVideo" src = {ProfileVideo} ref = {profileVideoRef} muted="muted" controls={true}></video>
                         </div>
                     </div>
                 </div>
