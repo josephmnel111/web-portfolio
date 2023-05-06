@@ -48,6 +48,7 @@ const projectDetails = [
 ]
 
 const Projects = forwardRef((props, ref) => {
+
     return (
         <div className = "Projects" ref = {ref}>
             <div className = "ProjectsTitle">
@@ -56,7 +57,7 @@ const Projects = forwardRef((props, ref) => {
             <div className = "PersonalProjects">
                 {
                     projectDetails.map((project) => 
-                        <IndividualProject key = {project.id} project = {project}></IndividualProject>
+                        <IndividualProject id = {project.id} key = {project.id} project = {project}></IndividualProject>
                     )
                 }
             </div>

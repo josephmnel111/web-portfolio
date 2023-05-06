@@ -1,6 +1,5 @@
 import React, {useRef, useEffect} from 'react'
 import './oplogic-app-details.css'
-import DetailsNavigationBar from '../DetailsNavigationBar/details-navigation-bar'
 import '../details.css'
 import CreatingVideo from '../../ProjectVideos/Oplogic/Oplogic-Create.mp4'
 import MessagingVideo1 from '../../ProjectVideos/Oplogic/OplogicMessagingVideo1.mp4'
@@ -96,7 +95,6 @@ function OplogicAppDetails () {
 
     return (
         <div className = "DetailsContainer">
-            <DetailsNavigationBar/>
             <div className = "DetailsTitle">
                 Oplogic App Details
             </div>

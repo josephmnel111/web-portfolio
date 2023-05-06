@@ -1,6 +1,5 @@
 import React, {useRef, useEffect} from 'react'
 import './fitness-app-details.css'
-import DetailsNavigationBar from '../DetailsNavigationBar/details-navigation-bar'
 import '../details.css'
 import ProfileVideo from '../../ProjectVideos/Fitness-App/Fitness-App-Profile.mp4'
 import LiftingVideo from '../../ProjectVideos/Fitness-App/Fitness-App-Lifting.mp4'
@@ -48,7 +47,6 @@ function FitnessAppDetails () {
 
     return (
         <div className = "DetailsContainer">
-            <DetailsNavigationBar/>
             <div className = "DetailsTitle">
                 Fitness App Details
             </div>

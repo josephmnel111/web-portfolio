@@ -1,6 +1,5 @@
 import React, {useRef, useEffect} from 'react'
 import './jeopardy-game-details.css'
-import DetailsNavigationBar from '../DetailsNavigationBar/details-navigation-bar'
 import '../details.css'
 import APIVideo from '../../ProjectVideos/Jeopardy-Game/Api-Video.mp4'
 import QuestionVideo from '../../ProjectVideos/Jeopardy-Game/Jeopardy_Question_Clip.mp4'
@@ -49,7 +48,6 @@ function JeopardyDetails () {
 
     return (
         <div className = "DetailsContainer">
-            <DetailsNavigationBar/>
             <div className = "DetailsTitle">
                 Jeopardy Game Details
             </div>

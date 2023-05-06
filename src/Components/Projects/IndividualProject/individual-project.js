@@ -7,6 +7,10 @@ function IndividualProjects({project}) {
 
     const navigate = useNavigate();
 
+    const handleNavigate = () => {
+        navigate(project.moreDetailsRoute)
+    }
+
     return (
         <div className = "IndividualProjects">
             <div className = "right-project">
@@ -57,7 +61,7 @@ function IndividualProjects({project}) {
                         </button>
                         <button 
                             className = "Details"
-                            onClick = {() => navigate(project.moreDetailsRoute)}
+                            onClick = {handleNavigate}
                         >
                             Details
                         </button>
