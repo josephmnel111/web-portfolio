@@ -1,15 +1,17 @@
 import React, {useRef, useEffect} from 'react'
 import './oplogic-app-details.css'
 import '../details.css'
-import CreatingVideo from '../../ProjectVideos/Oplogic/Oplogic-Create.mp4'
-import MessagingVideo1 from '../../ProjectVideos/Oplogic/OplogicMessagingVideo1.mp4'
-import MessagingVideo2 from '../../ProjectVideos/Oplogic/OplogicMessagingVideo2.mp4'
-import TaggingVideo1 from '../../ProjectVideos/Oplogic/OplogicTaggingVideo1.mp4'
-import TaggingVideo2 from '../../ProjectVideos/Oplogic/OplogicTaggingVideo2.mp4'
+import CreatingVideo1 from '../../ProjectVideos/Oplogic/CreateGroup1.mp4'
+import CreatingVideo2 from '../../ProjectVideos/Oplogic/CreateGroup2.mp4'
+import MessagingVideo1 from '../../ProjectVideos/Oplogic/SendMessage1.mp4'
+import MessagingVideo2 from '../../ProjectVideos/Oplogic/SendMessage2.mp4'
+import TaggingVideo1 from '../../ProjectVideos/Oplogic/SendNotification1.mp4'
+import TaggingVideo2 from '../../ProjectVideos/Oplogic/SendNotification2.mp4'
 
 function OplogicAppDetails () {
 
-    const creatingVideoRef = useRef(null)
+    const creatingVideo1Ref = useRef(null)
+    const creatingVideo2Ref = useRef(null)
     const messagingVideo1Ref = useRef(null)
     const messagingVideo2Ref = useRef(null)
     const taggingVideo1Ref = useRef(null)
@@ -21,21 +23,34 @@ function OplogicAppDetails () {
           rootMargin: "0px",
           threshold: [0.90, 1.00]
         };
-            let handlePlayCreating = (entries, creatingObserver) => {
+            let handlePlayCreating1 = (entries, creating1Observer) => {
                 entries.forEach((entry) => {
-                    if (creatingVideoRef.current != null) { //If we haven't navigated away from video page
+                    if (creatingVideo1Ref.current != null) { //If we haven't navigated away from video page
                         if (entry.isIntersecting) {
-                            creatingVideoRef.current.play();
+                            creatingVideo1Ref.current.play();
                         } else {
-                            creatingVideoRef.current.pause();
+                            creatingVideo1Ref.current.pause();
                         }
                     }
               });
             }
-            let creatingObserver = new IntersectionObserver(handlePlayCreating, options);
-            creatingObserver.observe(creatingVideoRef.current)
+            let creating1Observer = new IntersectionObserver(handlePlayCreating1, options);
+            creating1Observer.observe(creatingVideo1Ref.current)
     
-    
+            let handlePlayCreating2 = (entries, creating2Observer) => {
+                entries.forEach((entry) => {
+                    if (creatingVideo2Ref.current != null) { //If we haven't navigated away from video page
+                        if (entry.isIntersecting) {
+                            creatingVideo2Ref.current.play();
+                        } else {
+                            creatingVideo2Ref.current.pause();
+                        }
+                    }
+              });
+            }
+            let creating2Observer = new IntersectionObserver(handlePlayCreating2, options);
+            creating2Observer.observe(creatingVideo2Ref.current)
+
             let handlePlayMessaging1 =(entries, messaging1Observer) => {
                 entries.forEach((entry) => {
                     if (messagingVideo1Ref.current != null) { //If we haven't navigated away from video page
@@ -129,8 +144,19 @@ function OplogicAppDetails () {
                             users who use the app using a search bar/sorting algorithm. This allows for a much quicker process 
                             than figuring out what their unique id is.
                         </div>
-                        <div className = "FeaturesGraphic">
-                            <video className = "OplogicVideo" src = {CreatingVideo} ref = {creatingVideoRef} muted="muted" controls={true}></video>
+                        <div className = "FeaturesTwoGraphics">
+                            <div className = "FirstSection">   
+                                    <div className = "SectionTitle">
+                                        User 1
+                                    </div>
+                                    <video className = "TwoOplogicVideo" src = {CreatingVideo1} ref = {creatingVideo1Ref} muted="muted" controls={true}></video>
+                            </div>
+                            <div className = "SecondSection">
+                                <div className = "SectionTitle">
+                                    User 2
+                                </div>
+                                <video className = "TwoOplogicVideo" src = {CreatingVideo2} ref = {creatingVideo2Ref} muted="muted" controls={true}></video>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,19 +179,19 @@ function OplogicAppDetails () {
                                         User 1
                                     </div>
                                     <video className = "TwoOplogicVideo" src = {MessagingVideo1} ref = {messagingVideo1Ref} muted="muted" controls={true}></video>
-                                </div>
-                                <div className = "SecondSection">
-                                    <div className = "SectionTitle">
-                                        User 2
-                                    </div>
-                                    <video className = "TwoOplogicVideo" src = {MessagingVideo2} ref = {messagingVideo2Ref} muted="muted" controls={true}></video>
-                                </div>
                             </div>
+                            <div className = "SecondSection">
+                                <div className = "SectionTitle">
+                                    User 2
+                                </div>
+                                <video className = "TwoOplogicVideo" src = {MessagingVideo2} ref = {messagingVideo2Ref} muted="muted" controls={true}></video>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className = "FeaturesSection">
                     <div className = "FeaturesHeader">
-                        User Tagging/Notifications
+                        User Tagging/Notifications and Message Editing/Deleting
                     </div>
                     <div className = "FeaturesContentSection">
                         <div className = "FeaturesBody">
@@ -174,7 +200,8 @@ function OplogicAppDetails () {
                         that channel is displayed. They can click the name they wanted to tag, or keep typing the name
                         to narrow down the list even more. When a user is selected and the message is sent, the user of
                         the tag is sent a nofication and a symbol over the channel where they are tagged appears and changes
-                        based on the number of notifications.
+                        based on the number of notifications. A user can also edit and delete a message that only they have sent.
+                        Channel administrators can also delete any message that was sent in the channel where they are an administrator.
                         </div>
                         <div className = "FeaturesTwoGraphics">
                             <div className = "FirstSection">   
