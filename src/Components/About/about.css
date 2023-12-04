@@ -1,0 +1,32 @@
+.About {
+    font-family: 'Poppins';
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 10%;
+}
+.AboutTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 4%;
+}
+.AboutContent {
+    display: flex;
+    flex-direction: row;
+}
+.AboutImage {
+    text-align: center;
+    margin-left: 5%;
+}
+.ImageValue {
+    width: 45vw;
+    border-radius: 12px;
+}
+@media (orientation: portrait) {
+    .AboutTitle {
+        text-align: center;
+    }
+    .AboutContent {
+        flex-direction: column;
+        text-align: center;
+    }
+}

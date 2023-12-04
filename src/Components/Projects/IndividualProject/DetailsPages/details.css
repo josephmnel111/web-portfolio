@@ -1,0 +1,81 @@
+body {
+  font-size: 16px;
+  font-family: 'Poppins';
+}
+.DetailsContainer {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+.DetailsTitle {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5vh;
+}
+.Introduction {
+    
+}
+.IntroductionTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 2vh;
+}
+.FeaturesTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+}
+.FeaturesHeader {
+    margin-left: 4%;
+    font-weight: bold;
+}
+.FeaturesContentSection {
+    margin-bottom: 3vh;
+}
+.FeaturesBody {
+    
+}
+video {
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.FeaturesGraphic {
+    margin: 3vh;
+    text-align: center;
+}
+.FeaturesTwoGraphics {
+    height: 100%;
+    width: 100%;
+    margin: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+.SectionTitle {
+    font-weight: bold;
+}
+.FirstSection {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+.SecondSection {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+@media (orientation: portrait) {
+    html, body {
+        margin: 0%;
+    }
+    .DetailsContainer {
+        margin-top: 10%;
+    }
+  }

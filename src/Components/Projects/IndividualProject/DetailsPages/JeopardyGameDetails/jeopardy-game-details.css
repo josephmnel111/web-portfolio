@@ -1,0 +1,12 @@
+.JeopardyVideo {
+    width: 80%;
+    height: 51%;
+}
+
+
+@media (orientation: portrait) {
+    .JeopardyVideo {
+        height:200px;
+        width:317px;
+    }
+  }

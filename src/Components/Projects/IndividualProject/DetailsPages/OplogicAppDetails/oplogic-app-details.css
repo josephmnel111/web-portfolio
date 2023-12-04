@@ -1,0 +1,22 @@
+.OplogicVideo {
+    height: 50%;
+    width: 50%;
+}
+.TwoOplogicVideo {
+    height: 100%;
+    width: 100%;
+}
+.FirstSection {
+    margin-right: 2vw;
+}
+
+@media (orientation: portrait) {
+    .OplogicVideo {
+        height: 220px;
+        width: 220px;
+    }
+    .TwoOplogicVideo {
+        height: 150px;
+        width: 150px;
+    }
+  }

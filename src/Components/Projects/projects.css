@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(243,242,240);
+}
+.Projects {
+    height: 100%;
+    margin: 8%;
+}
+.ProjectsTitle {
+    font-family: 'poppins';
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 4%;
+}
+.PersonalProjects {
+    display: flex;
+    flex-direction: column;
+}
+@media (orientation: portrait) {
+ .ProjectsTitle {
+    text-align: center;
+ }   
+}

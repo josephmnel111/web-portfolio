@@ -1,0 +1,103 @@
+body {
+  height: 100%;
+}
+.IndividualProjects {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  height: 100%;
+  padding: 3%;
+  background-color: white;
+  text-align: center;
+  font-family: 'poppins';
+  margin-top: 3vh
+}
+.ProjectDescription {
+  margin-top: 2vh;
+}
+.DescriptionHead {
+  font-weight: bold;
+}
+.ProjectName {
+  font-weight: bold;
+  font-size: 18px;
+}
+.ProjectTools {
+  margin-top: 2vh;
+}
+.ToolsHead {
+  font-weight: bold;
+}
+.ToolsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Tool {
+  border-radius: 8px;
+  margin: 5px;
+  padding: 3px;
+  border: 1.5px solid rgba(0, 0, 0, .2);
+}
+.ProjectButtons {
+  margin-top: 2vh;
+}
+.ButtonHead {
+  font-weight: bold;
+}
+.ButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  font-family: 'poppins';
+  font-size: 16px;
+  background-color: white;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 3px;
+  border: 1.5px solid rgba(0, 0, 0, .2);
+}
+button:hover {
+  cursor:pointer;
+  background-color:rgba(0, 0, 0, .2);
+}
+.left-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  float: left;
+}
+.right-project {
+  width: 50%;
+  float: right;
+}
+.Oplogic {
+  width: 35vw;
+}
+.Jeopardy {
+  width: 35vw;
+}
+.Fitness {
+  width: 15vw;
+}
+@media (orientation: portrait) {
+  .IndividualProjects {
+    flex-direction: column;
+  }
+  .Oplogic {
+    width: 50vw;
+  }
+  .Jeopardy {
+    width: 50vw;
+  }
+  .left-project {
+    margin-top: 2vh;
+    width: 100%;
+  }
+  .right-project {
+    width: 100%;
+  }
+}
