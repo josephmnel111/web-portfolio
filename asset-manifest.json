@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/web-portfolio/static/css/main.410fe073.css",
+    "main.js": "/web-portfolio/static/js/main.96cb0c67.js",
+    "static/js/651.332020f3.chunk.js": "/web-portfolio/static/js/651.332020f3.chunk.js",
+    "static/media/Fitness-App-Lifting.mp4": "/web-portfolio/static/media/Fitness-App-Lifting.71b1919924fd36fb1b53.mp4",
+    "static/media/Fitness-App-Profile.mp4": "/web-portfolio/static/media/Fitness-App-Profile.cabd21fff84c861ccebc.mp4",
+    "static/media/Jeopardy_Question_Clip.mp4": "/web-portfolio/static/media/Jeopardy_Question_Clip.6aba2e923ac6e69e9463.mp4",
+    "static/media/laptop.png": "/web-portfolio/static/media/laptop.59af08b10d29d4825171.png",
+    "static/media/SendNotification2.mp4": "/web-portfolio/static/media/SendNotification2.9b6e3d98d40f48288963.mp4",
+    "static/media/Api-Video.mp4": "/web-portfolio/static/media/Api-Video.e3ce489e33281e333e6f.mp4",
+    "static/media/CreateGroup1.mp4": "/web-portfolio/static/media/CreateGroup1.1b69611dcd32577c3679.mp4",
+    "static/media/SendMessage1.mp4": "/web-portfolio/static/media/SendMessage1.f79fb9a199fc06dbc20e.mp4",
+    "static/media/SendNotification1.mp4": "/web-portfolio/static/media/SendNotification1.c6258c2831d8e3cbe201.mp4",
+    "static/media/SendMessage2.mp4": "/web-portfolio/static/media/SendMessage2.f9adef97330c6d0cf37a.mp4",
+    "static/media/CreateGroup2.mp4": "/web-portfolio/static/media/CreateGroup2.148bcc6b44141494f03a.mp4",
+    "static/media/oplogic_project_display.PNG": "/web-portfolio/static/media/oplogic_project_display.68b370d7e1e149e6afb6.PNG",
+    "static/media/jeopardy_game_display.PNG": "/web-portfolio/static/media/jeopardy_game_display.188e261c1fd3696126c0.PNG",
+    "static/media/Resume.pdf": "/web-portfolio/static/media/Resume.c2412bbceb2a5de93051.pdf",
+    "static/media/fitness_app_display.PNG": "/web-portfolio/static/media/fitness_app_display.4df952439686f9a7721e.PNG",
+    "index.html": "/web-portfolio/index.html",
+    "main.410fe073.css.map": "/web-portfolio/static/css/main.410fe073.css.map",
+    "main.96cb0c67.js.map": "/web-portfolio/static/js/main.96cb0c67.js.map",
+    "651.332020f3.chunk.js.map": "/web-portfolio/static/js/651.332020f3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.410fe073.css",
+    "static/js/main.96cb0c67.js"
+  ]
+}
